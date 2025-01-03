@@ -1,0 +1,17 @@
+.careers-page {
+  padding: 2rem;
+}
+.careers-hero {
+  background: #f4f4f4;
+  padding: 2rem;
+}
+.jobs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.job-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  flex: 1 1 30%;
+} 

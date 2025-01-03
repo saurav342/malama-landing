@@ -1,0 +1,13 @@
+.contact-page {
+  padding: 2rem;
+}
+.contact-grid {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-info {
+  flex: 1;
+}
+.contact-form {
+  flex: 1;
+} 

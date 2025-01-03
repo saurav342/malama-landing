@@ -1,0 +1,17 @@
+.about-page {
+  padding: 2rem;
+}
+.about-hero {
+  background: #f4f4f4;
+  padding: 2rem;
+}
+.mission-content {
+  margin: 2rem 0;
+}
+.stats-grid {
+  display: flex;
+  justify-content: space-around;
+}
+.stat-card {
+  text-align: center;
+} 
