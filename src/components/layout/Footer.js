@@ -25,7 +25,7 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <p>© Copyright 2024 by kodesolution.com</p>
-        <a href="/privacy-policy" className="privacy-link">Privacy Policy</a>
+        <a href="/privacy" className="privacy-link">Privacy Policy</a>
       </div>
     </footer>
   );
