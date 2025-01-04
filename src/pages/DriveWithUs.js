@@ -97,23 +97,7 @@ const DriveWithUs = () => {
         </div>
       </section>
 
-      <section className="app-section">
-        <div className="app-content">
-          <h2>Download CarrGo</h2>
-          <p>Download the CarrGo mobile application</p>
-          <div className="app-preview">
-            <img src="/images/app-preview.png" alt="Mobile App Preview" />
-          </div>
-          <div className="download-buttons">
-            <a href="#" className="store-button">
-              <img src="/images/app-store.png" alt="Download on App Store" />
-            </a>
-            <a href="#" className="store-button">
-              <img src="/images/play-store.png" alt="Get it on Google Play" />
-            </a>
-          </div>
-        </div>
-      </section>
+     
     </div>
   );
 };

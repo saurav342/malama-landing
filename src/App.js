@@ -5,6 +5,7 @@ import About from './pages/About';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
+import DriveWithUs from './pages/DriveWithUs';
 import './styles/App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/drive-with-us" element={<DriveWithUs />} />
         </Routes>
       </Layout>
     </Router>
