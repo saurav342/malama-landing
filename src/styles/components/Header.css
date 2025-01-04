@@ -1,6 +1,8 @@
+@import '../variables.css';
+
 /* Top Bar Styles */
 .top-bar {
-  background-color: #FFD700;
+  background-color: var(--primary-green);
   padding: 10px 0;
 }
 
@@ -19,7 +21,7 @@
 }
 
 .contact-info a {
-  color: #000;
+  color: var(--white);
   text-decoration: none;
   font-size: 0.9rem;
   display: flex;
@@ -33,7 +35,7 @@
 }
 
 .social-links a {
-  color: #000;
+  color: var(--white);
   text-decoration: none;
   font-size: 1rem;
   transition: opacity 0.3s ease;
@@ -45,7 +47,7 @@
 
 /* Main Header Styles */
 .main-header {
-  background-color: #000;
+  background-color: var(--black);
   padding: 20px 0;
   position: sticky;
   top: 0;
@@ -66,7 +68,7 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
 }
 
 .logo img {
@@ -87,7 +89,7 @@
 }
 
 .main-nav a {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
@@ -95,12 +97,12 @@
 }
 
 .main-nav a:hover {
-  color: #FFD700;
+  color: var(--primary-green);
 }
 
 .book-now-btn {
-  background-color: #FFD700;
-  color: #000;
+  background-color: var(--primary-red);
+  color: var(--white);
   text-decoration: none;
   padding: 12px 30px;
   font-weight: 600;

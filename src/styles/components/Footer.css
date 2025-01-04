@@ -1,6 +1,8 @@
+@import '../variables.css';
+
 .footer {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--black);
+  color: var(--white);
   padding: 40px 20px;
 }
 
@@ -26,6 +28,7 @@
 
 .footer-services h3 {
   margin-bottom: 15px;
+  color: var(--primary-green);
 }
 
 .footer-newsletter {
@@ -34,6 +37,7 @@
 
 .footer-newsletter h3 {
   margin-bottom: 15px;
+  color: var(--primary-green);
 }
 
 .footer-newsletter input {
@@ -45,8 +49,8 @@
 }
 
 .subscribe-btn {
-  background-color: #FFD700;
-  color: #000;
+  background-color: var(--primary-blue);
+  color: var(--white);
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -54,12 +58,14 @@
 }
 
 .subscribe-btn:hover {
-  background-color: #f8d000;
+  background-color: var(--primary-green);
 }
 
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
+  border-top: 1px solid var(--primary-green-light);
+  padding-top: 20px;
 }
 
 .footer-bottom p {
@@ -67,11 +73,12 @@
 }
 
 .privacy-link {
-  color: #FFD700;
+  color: var(--primary-blue);
   text-decoration: none;
   margin-left: 10px;
 }
 
 .privacy-link:hover {
+  color: var(--primary-green);
   text-decoration: underline;
 } 

@@ -1,0 +1,18 @@
+:root {
+  /* Primary Colors */
+  --primary-green: #38761d;
+  --primary-red: #990000;
+  --primary-blue: #0b5394;
+  
+  /* Supporting Colors */
+  --white: #ffffff;
+  --black: #000000;
+  --light-gray: #f4f4f4;
+  --dark-gray: #333333;
+  --medium-gray: #666666;
+  
+  /* Opacity Variants */
+  --primary-green-light: rgba(56, 118, 29, 0.1);
+  --primary-red-light: rgba(153, 0, 0, 0.1);
+  --primary-blue-light: rgba(11, 83, 148, 0.1);
+} 

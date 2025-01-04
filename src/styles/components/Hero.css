@@ -1,7 +1,8 @@
+@import '../variables.css';
+
 .hero {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-              /* url('/public/images/taxi-bg.jpg'); */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -15,7 +16,7 @@
   right: 0;
   width: 50%;
   height: 100%;
-  background: #FFD700;
+  background: var(--primary-green);
   opacity: 0.2;
   clip-path: polygon(100% 0, 0 0, 100% 100%);
 }
@@ -36,7 +37,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 4.5rem;
   font-weight: 700;
-  color: white;
+  color: var(--white);
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
@@ -49,7 +50,8 @@
 }
 
 .find-taxi-btn {
-  background-color: #FFD700;
+  background-color: var(--primary-blue);
+  color: var(--white);
   border: none;
   padding: 15px 40px;
   font-size: 1.1rem;
@@ -62,7 +64,7 @@
 
 .find-taxi-btn:hover {
   transform: translateY(-2px);
-  background-color: #f8d000;
+  background-color: var(--primary-green);
 }
 
 @media (max-width: 968px) {
