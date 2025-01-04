@@ -6,11 +6,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="nav-brand">
-        <Link to="/">
-          <img src="/logo.png" alt="Malama EV Cabs" className="nav-logo" />
-        </Link>
-      </div>
+     
       <div className="nav-links">
         <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
           Home
@@ -25,9 +21,7 @@ const Navbar = () => {
           Contact
         </Link>
       </div>
-      <div className="nav-cta">
-        <button className="btn btn-primary">Book Now</button>
-      </div>
+
     </nav>
   );
 };

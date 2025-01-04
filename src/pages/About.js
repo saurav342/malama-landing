@@ -1,53 +1,66 @@
-import { motion } from 'framer-motion';
+import React from 'react';
 import '../styles/pages/About.css';
 
 const About = () => {
   return (
-    <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="about-page"
-    >
-      <section className="about-hero">
-        <div className="container">
-          <h1>About Malama EV Cabs</h1>
-          <p>Leading the green revolution in Bengaluru's transportation</p>
-        </div>
-      </section>
+    <section className="about">
+      <div className="about-content">
+        <div className="about-text">
+          <span className="subtitle">WELCOME TO OUR COMPANY</span>
+          <h1>Feel The Difference<br />And Relaxation!</h1>
+          
+          <p className="description">
+            We successfully cope with tasks of varying complexity, provide long-term 
+            guarantees and regularly master new technologies. Our portfolio includes 
+            dozens of successfully completed projects of houses of different storeys, 
+            with high-quality finishes and good repairs. Building houses is our 
+            vocation We offer customized transportation solutions for businesses and 
+            organizations of all sizes Our corporate
+          </p>
 
-      <section className="about-mission">
-        <div className="container">
-          <div className="mission-content">
-            <h2>Our Mission</h2>
-            <p>To provide sustainable, comfortable, and reliable transportation while reducing carbon emissions in Bengaluru.</p>
-          </div>
-          <div className="stats-grid">
-            <div className="stat-card">
-              <h3>100+</h3>
-              <p>Electric Vehicles</p>
+          <div className="features-list">
+            <div className="feature">
+              <span className="check-icon">✓</span>
+              <p>We successfully cope with tasks of varying complexity.</p>
             </div>
-            <div className="stat-card">
-              <h3>50K+</h3>
-              <p>Happy Customers</p>
+            <div className="feature">
+              <span className="check-icon">✓</span>
+              <p>Long-term guarantees and regularly</p>
             </div>
-            <div className="stat-card">
-              <h3>500+</h3>
-              <p>Tons CO2 Saved</p>
+            <div className="feature">
+              <span className="check-icon">✓</span>
+              <p>Master new technologies.</p>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section className="team-section">
-        <div className="container">
-          <h2>Our Leadership Team</h2>
-          <div className="team-grid">
-            {/* Add team member components */}
+          <div className="contact-info">
+            <div className="phone-section">
+              <h3>Call For Taxi</h3>
+              <p className="phone">012 345 6789</p>
+            </div>
+            <div className="ceo-section">
+              {/* <img src="/images/ceo.jpg" alt="CEO" className="ceo-image" />
+              <div className="ceo-details">
+                <h4>Thomas Walker</h4>
+                <p>Founder - CEO</p>
+              </div> */}
+            </div>
           </div>
         </div>
-      </section>
-    </motion.div>
+
+        <div className="about-images">
+          <div className="image-grid">
+            <img src="/images/taxi-city.jpg" alt="Taxi in city" className="main-image" />
+            <img src="/images/driver.jpg" alt="Professional driver" className="driver-image" />
+            <img src="/images/taxi-street.jpg" alt="Taxi on street" className="street-image" />
+            <div className="play-button">
+              <button>▶</button>
+            </div>
+          </div>
+          <div className="yellow-accent"></div>
+        </div>
+      </div>
+    </section>
   );
 };
 

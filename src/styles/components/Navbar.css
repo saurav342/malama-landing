@@ -3,17 +3,51 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar a {
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #fff;
   text-decoration: none;
-  color: #333;
-  margin: 0 15px;
-  transition: color 0.3s;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-  color: #007BFF;
+.nav-links a.active {
+  color: #FFD700; /* Active link color */
+}
+
+.nav-links a:hover {
+  color: #FFD700; /* Hover color */
+}
+
+.nav-cta {
+  display: flex;
+}
+
+.btn {
+  background-color: #FFD700;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f8d000; /* Hover effect */
 } 

@@ -1,0 +1,187 @@
+.welcome-section {
+    padding: 6rem 5%;
+    background: white;
+}
+
+.welcome-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.welcome-image-container {
+    position: relative;
+}
+
+.welcome-image {
+    width: 100%;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.icon-circle {
+    position: absolute;
+    right: -30px;
+    bottom: 30%;
+    width: 120px;
+    height: 120px;
+    background: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.icon-inner {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.taxi-icon {
+    font-size: 40px;
+    color: black;
+}
+
+.welcome-content {
+    padding-right: 2rem;
+}
+
+.welcome-label {
+    display: inline-block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 30px;
+}
+
+.welcome-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    background: #FFE600;
+}
+
+.welcome-content h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.welcome-description {
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.welcome-quote {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.quote-bar {
+    width: 4px;
+    background: #FFE600;
+}
+
+.welcome-features {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature-item svg {
+    font-size: 1.5rem;
+    color: #FFE600;
+}
+
+.read-more-btn {
+    display: inline-block;
+    background-color: #FFE600;
+    color: #000;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn .btn-accent {
+    position: absolute;
+    right: -10px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background-color: #000;
+    transform: skew(-15deg);
+}
+
+.read-more-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 992px) {
+    .welcome-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .welcome-content {
+        padding-right: 0;
+    }
+
+    .welcome-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .icon-circle {
+        width: 100px;
+        height: 100px;
+        right: -20px;
+    }
+
+    .icon-inner {
+        width: 80px;
+        height: 80px;
+    }
+
+    .taxi-icon {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-section {
+        padding: 3rem 1rem;
+    }
+
+    .welcome-features {
+        flex-direction: column;
+        gap: 1rem;
+    }
+} 

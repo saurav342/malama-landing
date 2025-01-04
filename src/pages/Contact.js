@@ -1,82 +1,74 @@
-import { Formik, Form, Field } from 'formik';
-import * as Yup from 'yup';
-import { motion } from 'framer-motion';
+import React from 'react';
 import '../styles/pages/Contact.css';
-
-const ContactSchema = Yup.object().shape({
-  name: Yup.string().required('Required'),
-  email: Yup.string().email('Invalid email').required('Required'),
-  message: Yup.string().required('Required')
-});
 
 const Contact = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="contact-page"
-    >
-      <section className="contact-hero">
-        <div className="container">
-          <h1>Contact Us</h1>
-          <p>We're here to help!</p>
+    <section className="contact">
+      <div className="contact-container">
+        {/* Contact Form Section */}
+        <div className="form-section">
+          <span className="subtitle">SEND US EMAIL</span>
+          <h2>Feel free to write</h2>
+          
+          <form className="contact-form">
+            <div className="form-row">
+              <input type="text" placeholder="Your Name" />
+              <input type="email" placeholder="Enter Email" />
+            </div>
+            <div className="form-row">
+              <input type="text" placeholder="Subject" />
+              <input type="tel" placeholder="Phone" />
+            </div>
+            <textarea placeholder="Message" rows="6"></textarea>
+            <button type="submit" className="send-btn">SEND MESSAGE</button>
+          </form>
         </div>
-      </section>
 
-      <section className="contact-content">
-        <div className="container">
-          <div className="contact-grid">
-            <div className="contact-info">
-              <h2>Get in Touch</h2>
-              <div className="info-item">
-                <i className="fas fa-phone"></i>
-                <p>+91 XXXXXXXXXX</p>
+        {/* Contact Info Section */}
+        <div className="info-section">
+          <span className="subtitle">NEED ANY HELP?</span>
+          <h2>Get in touch with us</h2>
+          
+          <p className="info-description">
+            Lorem ipsum is simply free text available dolor sit amet consectetur 
+            notted adipisicing elit sed do eiusmod tempor incididunt simply 
+            dolore magna.
+          </p>
+
+          <div className="contact-details">
+            <div className="contact-item">
+              <div className="icon-box">
+                <img src="/icons/phone.svg" alt="Phone" />
               </div>
-              <div className="info-item">
-                <i className="fas fa-envelope"></i>
-                <p>contact@malamaevcabs.com</p>
-              </div>
-              <div className="info-item">
-                <i className="fas fa-map-marker-alt"></i>
-                <p>Bengaluru, Karnataka, India</p>
+              <div className="item-content">
+                <h3>Have any question?</h3>
+                <p>Free +92 (020)-9850</p>
               </div>
             </div>
 
-            <div className="contact-form">
-              <Formik
-                initialValues={{ name: '', email: '', message: '' }}
-                validationSchema={ContactSchema}
-                onSubmit={(values, { setSubmitting }) => {
-                  // Handle form submission
-                }}
-              >
-                {({ errors, touched }) => (
-                  <Form>
-                    <div className="form-group">
-                      <Field name="name" placeholder="Your Name" />
-                      {errors.name && touched.name && <div className="error">{errors.name}</div>}
-                    </div>
+            <div className="contact-item">
+              <div className="icon-box">
+                <img src="/icons/email.svg" alt="Email" />
+              </div>
+              <div className="item-content">
+                <h3>Write email</h3>
+                <p>needhelp@company.com</p>
+              </div>
+            </div>
 
-                    <div className="form-group">
-                      <Field name="email" type="email" placeholder="Your Email" />
-                      {errors.email && touched.email && <div className="error">{errors.email}</div>}
-                    </div>
-
-                    <div className="form-group">
-                      <Field name="message" as="textarea" placeholder="Your Message" />
-                      {errors.message && touched.message && <div className="error">{errors.message}</div>}
-                    </div>
-
-                    <button type="submit" className="btn btn-primary">Send Message</button>
-                  </Form>
-                )}
-              </Formik>
+            <div className="contact-item">
+              <div className="icon-box">
+                <img src="/icons/location.svg" alt="Location" />
+              </div>
+              <div className="item-content">
+                <h3>Visit anytime</h3>
+                <p>66 broklyn golden street. New York</p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-    </motion.div>
+      </div>
+    </section>
   );
 };
 
