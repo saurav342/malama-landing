@@ -1,3 +1,5 @@
+@import '../variables.css';
+
 .welcome-section {
     padding: 6rem 5%;
     background: white;
@@ -72,7 +74,7 @@
     top: 50%;
     width: 20px;
     height: 2px;
-    background: #FFE600;
+    background: var(--primary-blue);
 }
 
 .welcome-content h2 {
@@ -96,7 +98,7 @@
 
 .quote-bar {
     width: 4px;
-    background: #FFE600;
+    background: var(--primary-green);
 }
 
 .welcome-features {
@@ -113,13 +115,13 @@
 
 .feature-item svg {
     font-size: 1.5rem;
-    color: #FFE600;
+    color: var(--primary-blue);
 }
 
 .read-more-btn {
     display: inline-block;
-    background-color: #FFE600;
-    color: #000;
+    background-color: var(--primary-blue);
+    color: var(--white);
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
     font-weight: 600;

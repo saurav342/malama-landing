@@ -33,7 +33,7 @@ const Header = () => {
         <div className="header-content">
           <Link to="/" className="logo">
             <img src="../public/images/logo.png" alt="Malama" />
-            <span>Malama EV Cabs</span>
+            <span>Malama</span>
           </Link>
 
           <Navbar />

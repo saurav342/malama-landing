@@ -1,3 +1,5 @@
+@import '../variables.css';
+
 .contact {
   padding: 100px 20px;
   background: #fff;
@@ -12,7 +14,7 @@
 }
 
 .subtitle {
-  color: #FFD700;
+  color: var(--primary-green);
   font-weight: 600;
   font-size: 0.9rem;
   letter-spacing: 1px;
@@ -92,7 +94,7 @@
 .icon-box {
   width: 70px;
   height: 70px;
-  background: #FFD700;
+  background: var(--primary-blue);
   display: flex;
   align-items: center;
   justify-content: center;
