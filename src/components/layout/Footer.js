@@ -5,7 +5,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <div className="footer-logo">
+        {/* <div className="footer-logo"> */}
+        <div>
         <img src="/logo.png" alt="Malama" />
         <p>Revolutionizing the way you travel in Bangalore</p>
         </div>

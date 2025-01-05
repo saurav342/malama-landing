@@ -1,0 +1,223 @@
+@import '../variables.css';
+
+.app-download {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.app-download-bg {
+  position: relative;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%), url('../../../public/img/blog3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.app-download-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--primary-yellow);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  opacity: 0.1;
+}
+
+.app-download-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.app-download-text {
+  color: var(--white);
+}
+
+.app-download-text h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.app-download-text p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.app-store-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.store-button {
+  transition: transform 0.3s ease;
+}
+
+.store-button:hover {
+  transform: translateY(-5px);
+}
+
+.store-button img {
+  height: 50px;
+}
+
+.app-mockup {
+  position: relative;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-mockup {
+  position: relative;
+  z-index: 2;
+  animation: floatPhone 6s ease-in-out infinite;
+}
+
+.phone-img {
+  width: 300px;
+  height: auto;
+}
+
+.screen-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 80%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.screen-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.taxi-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: var(--primary-yellow);
+  border-radius: 50%;
+  top: 20%;
+  left: 0;
+  animation: floatElement 4s ease-in-out infinite;
+}
+
+.location-pin {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: var(--primary-red);
+  border-radius: 50%;
+  bottom: 30%;
+  right: 10%;
+  animation: floatElement 5s ease-in-out infinite;
+}
+
+.route-line {
+  position: absolute;
+  width: 150px;
+  height: 2px;
+  background: var(--primary-yellow);
+  top: 50%;
+  left: 30%;
+  transform: rotate(-45deg);
+  animation: drawLine 2s ease-in-out infinite;
+}
+
+@keyframes floatPhone {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes floatElement {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+}
+
+@keyframes drawLine {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    width: 150px;
+    opacity: 1;
+  }
+  100% {
+    width: 150px;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .app-download-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .app-download-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .app-store-buttons {
+    justify-content: center;
+  }
+
+  .app-mockup {
+    height: 500px;
+  }
+}
+
+@media (max-width: 576px) {
+  .app-download {
+    padding: 60px 0;
+  }
+
+  .app-download-text h2 {
+    font-size: 2rem;
+  }
+
+  .app-store-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-mockup {
+    height: 400px;
+  }
+
+  .phone-img {
+    width: 250px;
+  }
+} 

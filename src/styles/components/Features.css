@@ -26,6 +26,45 @@
   position: relative;
 }
 
+.animated-title {
+  position: relative;
+  display: inline-block;
+}
+
+.text-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.letters {
+  display: inline-block;
+  line-height: 1em;
+  background: linear-gradient(
+    45deg,
+    var(--primary-blue),
+    var(--primary-green),
+    var(--primary-red)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .features-grid {
   max-width: 1200px;
   margin: 0 auto;
