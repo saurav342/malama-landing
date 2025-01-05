@@ -6,25 +6,24 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <img src="/images/logo.png" alt="Malama" />
-          <p>Authoritatively simplify open-source resources via backend visualize business e-markets.</p>
+        <img src="/logo.png" alt="Malama" />
+        <p>Revolutionizing the way you travel in Bangalore</p>
         </div>
         <div className="footer-services">
           <h3>Services</h3>
-          <p>25 Street, 145 City Road New Town</p>
-          <p>DD14, USA</p>
-          <p>+1234567789</p>
-          <p>needhelp@company.com</p>
+          <p>Whitefield, Bangalore</p>
+          <p>+91 79756 12340</p>
+          <p>info@malamacabs.com</p>
         </div>
         <div className="footer-newsletter">
-          <h3>Newsletter</h3>
+          {/* <h3>Newsletter</h3>
           <p>Sign up for alerts, our latest blogs, thoughts, and insights.</p>
           <input type="email" placeholder="Your Email address" />
-          <button className="subscribe-btn">Subscribe</button>
+          <button className="subscribe-btn">Subscribe</button> */}
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© Copyright 2024 by kodesolution.com</p>
+        <p>© Copyright 2025 by Malama</p>
         <a href="/privacy" className="privacy-link">Privacy Policy</a>
       </div>
     </footer>
