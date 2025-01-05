@@ -59,8 +59,8 @@
 }
 
 .send-btn {
-  background: #000;
-  color: #fff;
+  background: var(--primary-blue);
+  color: var(--white);
   padding: 15px 40px;
   border: none;
   font-weight: 600;
@@ -69,7 +69,8 @@
 }
 
 .send-btn:hover {
-  background: #333;
+  background: var(--primary-blue);
+  opacity: 0.9;
 }
 
 .info-description {
