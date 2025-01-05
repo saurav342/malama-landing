@@ -31,7 +31,7 @@
     bottom: 30%;
     width: 120px;
     height: 120px;
-    background: black;
+    background: var(--primary-blue);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@
 .icon-inner {
     width: 100px;
     height: 100px;
-    background: white;
+    background: var(--white);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -51,7 +51,7 @@
 
 .taxi-icon {
     font-size: 40px;
-    color: black;
+    color: var(--primary-blue);
 }
 
 .welcome-content {
@@ -144,7 +144,7 @@
 
 .read-more-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px var(--primary-blue-light);
     opacity: 0.9;
 }
 

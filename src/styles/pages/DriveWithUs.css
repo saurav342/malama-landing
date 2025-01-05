@@ -7,7 +7,7 @@
 /* Hero Section */
 .hero-section {
   min-height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  background: linear-gradient(rgba(11, 83, 148, 0.9), rgba(11, 83, 148, 0.7));
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 80px 20px;
@@ -17,7 +17,7 @@
 .hero-content {
   max-width: 600px;
   margin: 0 auto;
-  color: #fff;
+  color: var(--white);
 }
 
 .hero-content h1 {
@@ -44,24 +44,25 @@
 }
 
 .form-card {
-  background: #fff;
+  background: var(--white);
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px var(--primary-blue-light);
 }
 
 .form-card h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--primary-blue);
 }
 
 .form-card input {
   width: 100%;
   padding: 15px;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--primary-blue-light);
   border-radius: 5px;
+  color: var(--dark-gray);
 }
 
 .submit-btn {
@@ -84,13 +85,14 @@
 /* How It Works Section */
 .how-it-works {
   padding: 100px 20px;
-  background: #f8f8f8;
+  background: var(--light-gray);
 }
 
 .how-it-works h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 60px;
+  color: var(--primary-blue);
 }
 
 .steps-container {

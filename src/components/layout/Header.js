@@ -1,20 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
+import { Link, useLocation } from 'react-router-dom';
 import '../../styles/components/Header.css';
 
 const Header = () => {
+  const location = useLocation();
+
   return (
     <>
       {/* Top Bar */}
       <div className="top-bar">
         <div className="top-bar-content">
           <div className="contact-info">
-            <a href="mailto:needhelp@example.com">
+            <a href="mailto:info@malamacabs.com">
               <i className="fas fa-envelope"></i>
               info@malamacabs.com
             </a>
-            <a href="tel:+666-888-9999">
+            <a href="tel:+91-79756-12340">
               <i className="fas fa-phone"></i>
               Tel: +91 79756 12340
             </a>
@@ -36,11 +37,38 @@ const Header = () => {
             {/* <span>Malama</span> */}
           </Link>
 
-          <Navbar />
+          <nav className="main-nav">
+            <ul>
+              <li>
+                <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className={location.pathname === "/services" ? "active" : ""}>
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/drive-with-us" className={location.pathname === "/drive-with-us" ? "active" : ""}>
+                  Drive With Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
 
           <Link to="/book" className="book-now-btn">
             Book Now
-            <span className="btn-accent"></span>
           </Link>
         </div>
       </header>

@@ -2,7 +2,7 @@
 
 .testimonials {
   padding: 100px 20px;
-  background: #f8f8f8;
+  background: var(--light-gray);
 }
 
 .testimonials-content {
@@ -25,12 +25,12 @@
 
 .testimonials-text h2 {
   font-size: 2.5rem;
-  color: #333;
+  color: var(--primary-blue);
   margin-bottom: 20px;
 }
 
 .testimonials-text p {
-  color: #666;
+  color: var(--medium-gray);
   line-height: 1.6;
   margin-bottom: 30px;
 }
@@ -87,7 +87,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(11, 83, 148, 0.3);
   border-radius: 8px;
 }
 

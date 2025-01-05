@@ -4,7 +4,9 @@
   --primary-color: var(--primary-blue);
   --secondary-color: var(--primary-green);
   --accent-color: var(--primary-red);
-  --text-color: var(--dark-gray);
+  --text-color: var(--medium-gray);
+  --background-color: var(--white);
+  --background-alt: var(--light-gray);
 }
 
 * {
@@ -17,6 +19,7 @@ body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 .app-container {
@@ -45,6 +48,7 @@ body {
 
 .btn-primary:hover {
   opacity: 0.9;
+  box-shadow: 0 5px 15px var(--primary-blue-light);
 }
 
 .btn-secondary {
@@ -59,6 +63,11 @@ body {
 
 .section {
   padding: 4rem 2rem;
+  background-color: var(--background-color);
+}
+
+.section-alt {
+  background-color: var(--background-alt);
 }
 
 .container {

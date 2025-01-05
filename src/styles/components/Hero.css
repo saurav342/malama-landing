@@ -2,7 +2,7 @@
 
 .hero {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(rgba(56, 118, 29, 0.9), rgba(56, 118, 29, 0.7));
   background-size: cover;
   background-position: center;
   position: relative;
@@ -16,7 +16,7 @@
   right: 0;
   width: 50%;
   height: 100%;
-  background: var(--primary-green);
+  background: var(--primary-blue);
   opacity: 0.2;
   clip-path: polygon(100% 0, 0 0, 100% 100%);
 }
@@ -50,7 +50,7 @@
 }
 
 .find-taxi-btn {
-  background-color: var(--primary-blue);
+  background-color: var(--primary-red);
   color: var(--white);
   border: none;
   padding: 15px 40px;
@@ -60,11 +60,13 @@
   transition: all 0.3s ease;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+  border: 2px solid var(--primary-red);
 }
 
 .find-taxi-btn:hover {
   transform: translateY(-2px);
-  background-color: var(--primary-green);
+  background-color: transparent;
+  color: var(--white);
 }
 
 @media (max-width: 968px) {
