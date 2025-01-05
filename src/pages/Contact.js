@@ -42,7 +42,7 @@ const Contact = () => {
               </div>
               <div className="item-content">
                 <h3>Have any question?</h3>
-                <p>Free +92 (020)-9850</p>
+                <p> +91 79756 12340 </p>
               </div>
             </div>
 
@@ -52,7 +52,7 @@ const Contact = () => {
               </div>
               <div className="item-content">
                 <h3>Write email</h3>
-                <p>needhelp@company.com</p>
+                <p>info@malamacabs.com</p>
               </div>
             </div>
 
@@ -62,7 +62,7 @@ const Contact = () => {
               </div>
               <div className="item-content">
                 <h3>Visit anytime</h3>
-                <p>66 broklyn golden street. New York</p>
+                <p>Whitefield, Bangalore</p>
               </div>
             </div>
           </div>
