@@ -1,103 +1,272 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import '../styles/pages/DriveWithUs.css';
 
 const DriveWithUs = () => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    city: '',
+    vehicleType: 'sedan',
+    experience: '0-1'
+  });
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log(formData);
+  };
+
+  const benefits = [
+    { icon: "💰", title: "Competitive Earnings", description: "Earn up to ₹45,000 per month with flexible working hours" },
+    { icon: "🎯", title: "Zero Commission", description: "Keep 100% of what you earn. No hidden charges" },
+    { icon: "🛡️", title: "Insurance Coverage", description: "Comprehensive insurance coverage for peace of mind" },
+    { icon: "📱", title: "Easy App", description: "User-friendly driver app with real-time tracking" }
+  ];
+
+  const requirements = [
+    "Valid Commercial Driver's License",
+    "Clean Driving Record",
+    "Vehicle not older than 5 years",
+    "Smartphone with Internet Connection",
+    "Background Verification",
+    "Vehicle Insurance"
+  ];
+
   return (
     <div className="drive-with-us">
-      <section className="hero-section">
-        <div className="hero-content">
-          <h1>Earn. Connect.<br />Contribute to<br />Society.</h1>
-          <p>Join our team of professional drivers and start earning while making a difference in your community.</p>
-          <div className="app-buttons">
-            <a href="#" className="app-button">
-              <img src="/images/app-store.png" alt="Download on App Store" />
-            </a>
-            <a href="#" className="app-button">
-              <img src="/images/play-store.png" alt="Get it on Google Play" />
-            </a>
-          </div>
-        </div>
+      {/* Hero Section */}
+      <motion.section 
+        className="hero-section"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <motion.div 
+          className="hero-content"
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+          <h1>
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              Drive & Earn
+            </motion.span>
+            <br />
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="highlight"
+            >
+              With Malama
+            </motion.span>
+          </h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+          >
+            Join our team of professional drivers and start earning while making a difference in your community.
+          </motion.p>
+          <motion.div 
+            className="earnings-badge"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 1, type: "spring" }}
+          >
+            <span className="amount">₹45,000</span>
+            <span className="period">per month</span>
+          </motion.div>
+        </motion.div>
 
-        <div className="signup-form">
+        <motion.div 
+          className="signup-form"
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+        >
           <div className="form-card">
-            <h2>Sign Up to Drive</h2>
-            <p>Start earning money and help people reach their destinations.</p>
-            <form>
-              <input type="text" placeholder="Full Name" />
-              <input type="email" placeholder="Email Address" />
-              <input type="tel" placeholder="Phone Number" />
-              <input type="text" placeholder="City" />
-              <button type="submit" className="submit-btn">Apply Now</button>
+            <h2>Start Earning Today</h2>
+            <p>Fill out the form below and we'll contact you within 24 hours.</p>
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <input 
+                  type="text" 
+                  name="fullName" 
+                  placeholder="Full Name" 
+                  value={formData.fullName}
+                  onChange={handleInputChange}
+                  required 
+                />
+              </div>
+              <div className="form-group">
+                <input 
+                  type="email" 
+                  name="email" 
+                  placeholder="Email Address" 
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required 
+                />
+              </div>
+              <div className="form-group">
+                <input 
+                  type="tel" 
+                  name="phone" 
+                  placeholder="Phone Number" 
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required 
+                />
+              </div>
+              <div className="form-group">
+                <input 
+                  type="text" 
+                  name="city" 
+                  placeholder="City" 
+                  value={formData.city}
+                  onChange={handleInputChange}
+                  required 
+                />
+              </div>
+              <div className="form-group">
+                <select 
+                  name="vehicleType" 
+                  value={formData.vehicleType}
+                  onChange={handleInputChange}
+                >
+                  <option value="sedan">Sedan</option>
+                  <option value="suv">SUV</option>
+                  <option value="luxury">Luxury</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <select 
+                  name="experience" 
+                  value={formData.experience}
+                  onChange={handleInputChange}
+                >
+                  <option value="0-1">0-1 years</option>
+                  <option value="1-3">1-3 years</option>
+                  <option value="3+">3+ years</option>
+                </select>
+              </div>
+              <motion.button 
+                type="submit" 
+                className="submit-btn"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Apply Now
+              </motion.button>
             </form>
           </div>
+        </motion.div>
+      </motion.section>
+
+      {/* Benefits Section */}
+      <section className="benefits-section">
+        <motion.div 
+          className="section-header"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2>Why Drive With Us?</h2>
+          <p>Join thousands of drivers who trust Malama</p>
+        </motion.div>
+
+        <div className="benefits-grid">
+          {benefits.map((benefit, index) => (
+            <motion.div 
+              key={index}
+              className="benefit-card"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+            >
+              <div className="benefit-icon">{benefit.icon}</div>
+              <h3>{benefit.title}</h3>
+              <p>{benefit.description}</p>
+            </motion.div>
+          ))}
         </div>
       </section>
 
-      <section className="how-it-works">
-        <h2>How It Works</h2>
-        <div className="steps-container">
-          <div className="step">
-            <div className="step-icon">1</div>
-            <h3>Sign Up in Just 3 Steps</h3>
-            <p>Submit your details and we'll contact you as soon as we can.</p>
-          </div>
-          <div className="step">
-            <div className="step-icon">2</div>
-            <h3>Get a Driver</h3>
-            <p>Complete verification and start accepting ride requests.</p>
-          </div>
-          <div className="step">
-            <div className="step-icon">3</div>
-            <h3>Track your Driver</h3>
-            <p>Track your earnings and manage your schedule easily.</p>
-          </div>
-          <div className="step">
-            <div className="step-icon">4</div>
-            <h3>Be time savvy</h3>
-            <p>Choose your own hours and maximize your earnings.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="about-section">
-        <div className="about-content">
-          <div className="about-text">
-            <h2>About CarrGo</h2>
-            <p>We're committed to providing the best experience for our drivers and passengers. Join our growing community of professional drivers and be part of something bigger.</p>
-            <ul className="features">
-              <li>Flexible working hours</li>
-              <li>Competitive earnings</li>
-              <li>Professional support</li>
-              <li>Regular incentives</li>
+      {/* Requirements Section */}
+      <section className="requirements-section">
+        <motion.div 
+          className="requirements-content"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="requirements-text">
+            <h2>Requirements</h2>
+            <ul className="requirements-list">
+              {requirements.map((req, index) => (
+                <motion.li 
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  {req}
+                </motion.li>
+              ))}
             </ul>
-            <button className="learn-more">Learn More</button>
           </div>
-          <div className="about-image">
-            <img src="/images/drivers-team.jpg" alt="Our Drivers Team" />
-          </div>
-        </div>
+          <motion.div 
+            className="requirements-image"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <img src="/img/driver-requirements.jpg" alt="Driver Requirements" />
+          </motion.div>
+        </motion.div>
       </section>
 
-      <section className="services-section">
-        <div className="services-content">
-          <h2>Trusted Cab Services<br />in the World</h2>
-          <div className="services-grid">
-            <div className="service-image">
-              <img src="/images/yellow-cab.jpg" alt="Yellow Cab" />
-            </div>
-            <div className="service-features">
-              <ul>
-                <li>24/7 Support</li>
-                <li>Professional Drivers</li>
-                <li>Flexible Hours</li>
-              </ul>
-              <button className="discover-btn">DISCOVER MORE</button>
-            </div>
-          </div>
+      {/* CTA Section */}
+      <motion.section 
+        className="cta-section"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <div className="cta-content">
+          <h2>Ready to Start?</h2>
+          <p>Join our team of professional drivers today</p>
+          <motion.button 
+            className="cta-button"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => document.querySelector('.signup-form').scrollIntoView({ behavior: 'smooth' })}
+          >
+            Apply Now
+          </motion.button>
         </div>
-      </section>
-
-     
+      </motion.section>
     </div>
   );
 };
