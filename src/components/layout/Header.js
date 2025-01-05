@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import '../../styles/components/Header.css';
 
 const Header = () => {
@@ -35,7 +36,6 @@ const Header = () => {
         <div className="header-content">
           <Link to="/" className="logo">
             <img src="/mainlogo.png" alt="Malama" />
-            {/* <span>Malama</span> */}
           </Link>
 
           <nav className="main-nav">
@@ -68,9 +68,25 @@ const Header = () => {
             </ul>
           </nav>
 
-          <Link to="/book" className="book-now-btn">
-            Book Now
-          </Link>
+          <motion.a 
+            href="tel:+91-79756-12340"
+            className="call-now-btn"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <motion.div 
+              className="phone-icon"
+              animate={{ rotate: [0, -15, 15, -15, 15, 0] }}
+              transition={{ 
+                duration: 0.5, 
+                repeat: Infinity, 
+                repeatDelay: 3 
+              }}
+            >
+              <i className="fas fa-phone-alt"></i>
+            </motion.div>
+            <span className="phone-number">+91 79756 12340</span>
+          </motion.a>
         </div>
       </header>
     </>
