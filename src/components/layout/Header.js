@@ -21,10 +21,11 @@ const Header = () => {
             </a>
           </div>
           <div className="social-links">
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-youtube"></i></a>
-            <a href="#"><i className="fab fa-linkedin-in"></i></a>
+            <a href="https://x.com/malamacabs" target="_blank"><i className="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/malamacabs" target="_blank"><i className="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@malamacabs" target="_blank"><i className="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/malamacabs" target="_blank"><i className="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/malamacabs" target="_blank"><i className="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
