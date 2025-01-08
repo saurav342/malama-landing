@@ -66,22 +66,22 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>
-                  About
+                <Link to="/your-next-ride" className={location.pathname === "/your-next-ride" ? "active" : ""}>
+                  Your Next Ride
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className={location.pathname === "/privacy" ? "active" : ""}>
-                  Privacy
-                </Link>
-              </li>
-              <li>
-                <Link to="/drive-with-us" className={location.pathname === "/drive-with-us" ? "active" : ""}>
+                <Link to="/become-a-driver" className={location.pathname === "/become-a-driver" ? "active" : ""}>
                   Drive With Us
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>
+                <Link to="/about-us" className={location.pathname === "/about-us" ? "active" : ""}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact-us" className={location.pathname === "/contact-us" ? "active" : ""}>
                   Contact
                 </Link>
               </li>
