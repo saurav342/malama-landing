@@ -9,7 +9,7 @@ const HowItWorks = () => {
       title: "BOOK IN JUST",
       subtitle: "2 TABS",
       description: "Book your ride with just two simple taps on your phone. Quick, easy, and hassle-free booking process.",
-      bgColor: "#FFE500"
+      bgColor: "#4CAF50"
     },
     {
       icon: "📍",
