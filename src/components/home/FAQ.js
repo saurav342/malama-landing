@@ -54,38 +54,38 @@ const FAQ = () => {
   };
 
   return (
-    <section className="faq-section">
-      <div className="faq-container">
-        <div className="faq-header">
-          <span className="subtitle">FAQ</span>
-          <h2>Frequently Asked Questions</h2>
-          <p>Find quick answers to common questions about our taxi service</p>
+    <section className="malama-faq">
+      <div className="malama-faq__container">
+        <div className="malama-faq__header">
+          <span className="malama-faq__subtitle">FAQ</span>
+          <h2 className="malama-faq__title">Frequently Asked Questions</h2>
+          <p className="malama-faq__description">Find quick answers to common questions about our taxi service</p>
         </div>
 
-        <div className="faq-grid">
+        <div className="malama-faq__grid">
           {faqData.map((faq) => (
             <div
               key={faq.id}
-              className={`faq-item ${activeId === faq.id ? 'active' : ''}`}
+              className={`malama-faq__item ${activeId === faq.id ? 'active' : ''}`}
               style={{ '--hover-color': faq.color }}
               onClick={() => toggleFAQ(faq.id)}
             >
-              <div className="faq-icon">
+              <div className="malama-faq__icon">
                 <span>{faq.icon}</span>
               </div>
-              <div className="faq-content">
-                <h3>{faq.question}</h3>
-                <div className="faq-answer">
-                  <p>{faq.answer}</p>
+              <div className="malama-faq__content">
+                <h3 className="malama-faq__question">{faq.question}</h3>
+                <div className="malama-faq__answer">
+                  <p className="malama-faq__answer-text">{faq.answer}</p>
                 </div>
               </div>
-              <div className="faq-toggle">
+              <div className="malama-faq__toggle">
                 <svg 
                   width="24" 
                   height="24" 
                   viewBox="0 0 24 24" 
                   fill="none"
-                  className="toggle-icon"
+                  className="malama-faq__toggle-icon"
                 >
                   <path 
                     d="M12 8L12 16" 
@@ -105,10 +105,10 @@ const FAQ = () => {
           ))}
         </div>
 
-        <div className="faq-pattern">
-          <div className="pattern-circle"></div>
-          <div className="pattern-line"></div>
-          <div className="pattern-dots"></div>
+        <div className="malama-faq__pattern">
+          <div className="malama-faq__pattern-circle"></div>
+          <div className="malama-faq__pattern-line"></div>
+          <div className="malama-faq__pattern-dots"></div>
         </div>
       </div>
     </section>
