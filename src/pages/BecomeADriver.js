@@ -89,30 +89,41 @@ const BecomeADriver = () => {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* How to Get Started */}
       <section className="how-it-works">
         <div className="container">
           <h2>How to Get Started</h2>
           <div className="steps-container">
             <div className="step">
               <div className="step-number">1</div>
-              <h3>Sign Up</h3>
-              <p>Fill in your details and submit required documents</p>
+              <div className="step-content">
+                <h3>Sign Up</h3>
+                <p>Fill in your details and submit required documents</p>
+              </div>
+              <div className="progress-line"></div>
             </div>
             <div className="step">
               <div className="step-number">2</div>
-              <h3>Get Verified</h3>
-              <p>Complete background verification process</p>
+              <div className="step-content">
+                <h3>Get Verified</h3>
+                <p>Complete background verification process</p>
+              </div>
+              <div className="progress-line"></div>
             </div>
             <div className="step">
               <div className="step-number">3</div>
-              <h3>Complete Training</h3>
-              <p>Attend our comprehensive training program</p>
+              <div className="step-content">
+                <h3>Complete Training</h3>
+                <p>Attend our comprehensive training program</p>
+              </div>
+              <div className="progress-line"></div>
             </div>
             <div className="step">
               <div className="step-number">4</div>
-              <h3>Start Earning</h3>
-              <p>Begin accepting rides and earning money</p>
+              <div className="step-content">
+                <h3>Start Earning</h3>
+                <p>Begin accepting rides and earning money</p>
+              </div>
             </div>
           </div>
         </div>
@@ -129,7 +140,7 @@ const BecomeADriver = () => {
                   <li key={index}>{req}</li>
                 ))}
               </ul>
-              <button className="apply-btn">Apply Now</button>
+              {/* <button className="apply-btn">Apply Now</button> */}
             </div>
             <div className="requirements-image">
               <img src="/img/requirements.jpg" alt="Driver requirements" />
