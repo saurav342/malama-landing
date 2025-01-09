@@ -104,7 +104,7 @@ const YourNextRide = () => {
 
             {/* Center Image */}
             <div className="benefits-center">
-              <img src="/img/icon-car-2.png" alt="Taxi" className="taxi-icon" />
+              <img src="/images/c3e.png" alt="Taxi" className="taxi-icon" />
             </div>
 
             {/* Right Benefits */}
