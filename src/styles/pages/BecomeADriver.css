@@ -73,88 +73,235 @@
 
 /* Benefits Section */
 .driver-benefits {
-  padding: 80px 0;
+  padding: 100px 0;
   background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.benefits-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(45deg, #f8f9fa 25%, transparent 25%),
+    linear-gradient(-45deg, #f8f9fa 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #f8f9fa 75%),
+    linear-gradient(-45deg, transparent 75%, #f8f9fa 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  opacity: 0.1;
 }
 
 .benefits-header {
-  max-width: 800px;
-  margin: 0 auto 60px;
   text-align: center;
-  padding: 0 20px;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 2;
 }
 
-.benefits-header h1 {
-  font-size: 42px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 24px;
+.benefits-header .subtitle {
+  display: inline-block;
+  background: #FFE600;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
 }
 
-.benefits-header p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #666;
+.benefits-header .subtitle::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 16px;
+  background: #FFE600;
 }
 
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.benefits-header h2 {
+  font-size: 56px;
+  font-weight: 800;
+  color: #000;
+  margin: 0;
+  line-height: 1.1;
 }
 
-.benefit-card {
-  text-align: center;
-  padding: 30px 20px;
-  transition: transform 0.3s ease;
+.benefits-layout {
+  max-width: 1400px;
+  margin: -40px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 40px;
 }
 
-.benefit-card:hover {
-  transform: translateY(-5px);
+.benefits-side {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.left-benefits {
+  text-align: right;
+  padding-right: 60px;
+}
+
+.right-benefits {
+  text-align: left;
+  padding-left: 60px;
+}
+
+.benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.left-benefits .benefit-item {
+  align-items: flex-end;
+}
+
+.right-benefits .benefit-item {
+  align-items: flex-start;
 }
 
 .benefit-icon {
+  margin-bottom: 5px;
+}
+
+.icon-circle {
   width: 64px;
   height: 64px;
-  margin: 0 auto 20px;
+  background: var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
 }
 
-.benefit-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.benefit-item:hover .icon-circle {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(56, 118, 29, 0.2);
 }
 
-.benefit-card h3 {
-  color: #333;
-  font-size: 20px;
+.benefit-item h3 {
+  font-size: 24px;
   font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.benefit-card p {
-  color: #666;
-  font-size: 16px;
-  line-height: 1.5;
+  color: #000;
   margin: 0;
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+.benefit-item p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 250px;
 }
 
-@media (max-width: 576px) {
-  .benefits-grid { 
-    grid-template-columns: 1fr;
-    gap: 30px;
+.benefits-center {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.taxi-icon {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.1));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
   }
-  .benefit-card { padding: 20px; }
-  .benefit-card h3 { font-size: 18px; }
-  .benefit-card p { font-size: 15px; }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@media (max-width: 1400px) {
+  .benefits-layout {
+    max-width: 1200px;
+  }
+  
+  .benefits-center {
+    width: 400px;
+    height: 400px;
+  }
+  
+  .benefits-side {
+    width: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .benefits-layout {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .benefits-side {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    gap: 40px;
+  }
+
+  .left-benefits, .right-benefits {
+    text-align: center;
+  }
+
+  .benefit-item {
+    align-items: center !important;
+  }
+
+  .benefits-center {
+    width: 300px;
+    height: 300px;
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits-side {
+    flex-direction: column;
+  }
+
+  .benefit-item p {
+    max-width: 100%;
+  }
+
+  .benefits-header h2 {
+    font-size: 42px;
+  }
+  
+  .benefits-layout {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefits-header h2 {
+    font-size: 36px;
+  }
 }
 
 /* How It Works Section */
@@ -301,60 +448,162 @@
 /* Requirements Section */
 .requirements {
   padding: 80px 0;
-  background: #f8f9fa;
+  background-color: var(--primary-green);
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .requirements-content {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 80px;
   align-items: start;
 }
 
-.requirements-text {
-  width: 100%;
+.requirements-text h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: white;
 }
 
-.requirements-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
-  width: 100%;
+.requirements-points {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.requirement-item {
-  background: #fff;
-  padding: 1.5rem;
+.requirement-point {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 24px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.requirement-item:hover {
-  transform: translateY(-2px);
+.requirement-point:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateX(10px);
 }
 
-.requirement-item h3 {
-  color: #2c5a2e;
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+.requirement-point h3 {
+  color: white;
+  margin-bottom: 8px;
+  font-size: 20px;
   font-weight: 600;
 }
 
-.requirement-item p {
-  color: #666;
-  font-size: 0.95rem;
-  line-height: 1.5;
+.requirement-point p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.requirements-image {
+  position: relative;
 }
 
 .requirements-image img {
   width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.requirements-image:hover img {
+  transform: translateY(-5px);
+}
+
+/* Add a subtle overlay to the image */
+.requirements-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(56, 118, 29, 0.2),
+    rgba(56, 118, 29, 0.1)
+  );
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+@media (max-width: 1500px) {
+  .requirements-content {
+    max-width: 1200px;
+    padding: 0 30px;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .requirements-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  
+  .requirements-text h2 {
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .requirements-image {
+    order: -1;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .requirements {
+    padding: 60px 0;
+  }
+
+  .requirements-text h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .requirement-point {
+    padding: 20px;
+  }
+
+  .requirement-point h3 {
+    font-size: 18px;
+  }
+
+  .requirement-point p {
+    font-size: 15px;
+  }
+
+  .requirement-point:hover {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .requirements-text h2 {
+    font-size: 28px;
+  }
+
+  .requirement-point h3 {
+    font-size: 16px;
+  }
+
+  .requirement-point p {
+    font-size: 14px;
+  }
 }
 
 /* FAQ Section Styles */
@@ -366,29 +615,45 @@
 .faq-section h2 {
   text-align: center;
   margin-bottom: 40px;
+  color: #333;
+  font-size: 36px;
+  font-weight: 700;
 }
 
 .faq-container {
   max-width: 800px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 0 20px;
 }
 
 .faq-item {
-  margin-bottom: 16px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .faq-item details {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0;
 }
 
 .faq-item summary {
   padding: 20px;
   cursor: pointer;
-  font-weight: 600;
-  list-style: none;
   position: relative;
+  font-weight: 600;
+  color: #333;
+  list-style: none;
+  transition: background-color 0.3s ease;
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -399,6 +664,7 @@
   content: '+';
   position: absolute;
   right: 20px;
+  color: var(--primary-green);
   transition: transform 0.3s ease;
 }
 
@@ -406,11 +672,36 @@
   transform: rotate(45deg);
 }
 
+.faq-item details[open] summary {
+  background-color: rgba(56, 118, 29, 0.05);
+}
+
 .faq-item p {
-  padding: 0 20px 20px;
+  padding: 20px;
   margin: 0;
   color: #666;
   line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .faq-container {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-section h2 {
+    font-size: 28px;
+  }
+
+  .faq-item summary {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .faq-item p {
+    padding: 15px;
+    font-size: 14px;
+  }
 }
 
 /* CTA Section */

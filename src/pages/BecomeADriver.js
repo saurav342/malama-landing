@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/pages/BecomeADriver.css';
+import DriverFAQ from '../components/driver/DriverFAQ';
 
 const BecomeADriver = () => {
   const benefits = [
@@ -79,26 +80,70 @@ const BecomeADriver = () => {
 
       {/* Benefits Section */}
       <section className="driver-benefits">
-        <div className="container">
-          <div className="benefits-header">
-            <h1>Benefits of driving with us</h1>
-            <p>
-              As a driver with us, you'll enjoy flexible scheduling, competitive earnings, 
-              and the support of a dedicated team that values your contribution. Whether 
-              you're looking for full-time opportunities or part-time work, we provide 
-              comprehensive training and state-of-the-art technology to help you succeed.
-            </p>
+        <div className="benefits-pattern"></div>
+        <div className="benefits-header">
+            <span className="subtitle">MAIN FEATURES</span>
+            <h2>Our Benefits</h2>
           </div>
-          <div className="benefits-grid">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="benefit-card">
+        <div className="container">
+         
+          <div className="benefits-layout">
+            {/* Left Benefits */}
+            <div className="benefits-side left-benefits">
+              <div className="benefit-item">
                 <div className="benefit-icon">
-                  <img src={benefit.icon} alt={benefit.title} />
+                  <div className="icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2"/>
+                    </svg>
+                  </div>
                 </div>
-                <h3>{benefit.title}</h3>
-                <p>{benefit.description}</p>
+                <h3>Fixed Price</h3>
+                <p>Transparent pricing with no hidden charges</p>
               </div>
-            ))}
+              <div className="benefit-item">
+                <div className="benefit-icon">
+                  <div className="icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" strokeWidth="2"/>
+                    </svg>
+                  </div>
+                </div>
+                <h3>Safe Guarantee</h3>
+                <p>24/7 support and insurance coverage</p>
+              </div>
+            </div>
+
+            {/* Center Image */}
+            <div className="benefits-center">
+              <img src="/img/icon-car-2.png" alt="Taxi" className="taxi-icon" />
+            </div>
+
+            {/* Right Benefits */}
+            <div className="benefits-side right-benefits">
+              <div className="benefit-item">
+                <div className="benefit-icon">
+                  <div className="icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 2V6M12 18V22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22" stroke="currentColor" strokeWidth="2"/>
+                    </svg>
+                  </div>
+                </div>
+                <h3>Fast Pickups</h3>
+                <p>Quick response and minimal waiting time</p>
+              </div>
+              <div className="benefit-item">
+                <div className="benefit-icon">
+                  <div className="icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2"/>
+                    </svg>
+                  </div>
+                </div>
+                <h3>Quick Ride</h3>
+                <p>Efficient route optimization system</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -148,14 +193,28 @@ const BecomeADriver = () => {
         <div className="container">
           <div className="requirements-content">
             <div className="requirements-text">
-              <h2> Requirements</h2>
-              <div className="requirements-list">
-                {requirements.map((req, index) => (
-                  <div key={index} className="requirement-item">
-                    <h3>{req.title}</h3>
-                    <p>{req.detail}</p>
-                  </div>
-                ))}
+              <h2>Driver Requirements</h2>
+              <div className="requirements-points">
+                <div className="requirement-point">
+                  <h3>Valid License</h3>
+                  <p>Commercial Driving License with minimum 2 years experience</p>
+                </div>
+                <div className="requirement-point">
+                  <h3>Clean Record</h3>
+                  <p>No major traffic violations or accidents in the past 3 years</p>
+                </div>
+                <div className="requirement-point">
+                  <h3>Smart Device</h3>
+                  <p>Android/iOS smartphone with active internet connection</p>
+                </div>
+                <div className="requirement-point">
+                  <h3>Documentation</h3>
+                  <p>Valid vehicle registration & insurance (if using own vehicle)</p>
+                </div>
+                <div className="requirement-point">
+                  <h3>Verification</h3>
+                  <p>Must pass background check and drug screening</p>
+                </div>
               </div>
             </div>
             <div className="requirements-image">
@@ -166,40 +225,10 @@ const BecomeADriver = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="faq-section">
-        <div className="container">
-          <h2>Frequently Asked Questions</h2>
-          <div className="faq-container">
-            <div className="faq-item">
-              <details>
-                <summary>How much can I earn?</summary>
-                <p>Earnings vary based on hours worked and trips completed. On average, our drivers earn ₹35,000 - ₹45,000 per month plus incentives.</p>
-              </details>
-            </div>
-            <div className="faq-item">
-              <details>
-                <summary>Do I need my own car?</summary>
-                <p>You can drive with your own car or use one of our partner vehicles. We have flexible options to suit your needs.</p>
-              </details>
-            </div>
-            <div className="faq-item">
-              <details>
-                <summary>How do I get paid?</summary>
-                <p>Payments are made weekly directly to your bank account. You can track your earnings in real-time through our driver app.</p>
-              </details>
-            </div>
-            <div className="faq-item">
-              <details>
-                <summary>What support do you provide?</summary>
-                <p>We offer 24/7 support, insurance coverage, maintenance assistance, and regular training programs.</p>
-              </details>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DriverFAQ />
 
       {/* CTA Section */}
-      <section className="driver-cta">
+      {/* <section className="driver-cta">
         <div className="container">
           <div className="cta-content">
             <h2>Ready to Start Earning?</h2>
@@ -207,7 +236,7 @@ const BecomeADriver = () => {
             <button className="cta-button">Register Now</button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
