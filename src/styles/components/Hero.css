@@ -289,6 +289,7 @@
 }
 
 .app-store-wrapper {
+  position: relative;
   display: flex;
   gap: 15px;
   align-items: center;
@@ -297,35 +298,120 @@
   padding: 0 20px;
 }
 
-.store-button {
-  transition: transform 0.3s ease;
+.coming-soon-badge {
+  position: absolute;
+  top: 50%;
+  left: 355px;
+  transform: translate(-100%, -50%);
+  background: var(--primary-green);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  animation: bounceHorizontal 2s infinite;
+  box-shadow: 0 4px 12px rgba(56, 118, 29, 0.2);
+  white-space: nowrap;
+  z-index: 1;
 }
 
-.store-button:hover {
-  transform: translateY(-3px);
+.coming-soon-badge::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid var(--primary-green);
 }
 
-.store-button img {
+.store-button.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  filter: grayscale(0.4);
+  transition: all 0.3s ease;
+}
+
+.store-button.disabled:hover {
+  transform: none;
+}
+
+.store-button.disabled img {
   height: 40px;
   width: auto;
 }
 
-@media (max-width: 992px) {
-  .stats-container {
-    grid-template-columns: repeat(2, 1fr);
+@keyframes bounceHorizontal {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(-50%) translateX(0);
   }
-  
-  .app-store-wrapper {
-    margin-top: 30px;
+  40% {
+    transform: translateY(-50%) translateX(10px);
+  }
+  60% {
+    transform: translateY(-50%) translateX(5px);
+  }
+}
+
+/* Add a pulsing effect to the coming soon badge */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(56, 118, 29, 0.2);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(56, 118, 29, 0.4);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(56, 118, 29, 0.2);
+  }
+}
+
+.coming-soon-badge {
+  animation: bounceHorizontal 2s infinite, pulse 2s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .coming-soon-badge {
+    left: 5px;
+  }
+}
+
+@media (max-width: 992px) {
+  .coming-soon-badge {
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .coming-soon-badge::after {
+    right: auto;
+    top: auto;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid var(--primary-green);
+  }
+
+  .coming-soon-badge {
+    animation: bounce 2s infinite, pulse 2s infinite;
   }
 }
 
 @media (max-width: 768px) {
-  .stats-container {
-    grid-template-columns: 1fr;
+  .coming-soon-badge {
+    font-size: 0.8rem;
+    padding: 4px 12px;
+    top: -25px;
   }
 
-  .store-button img {
+  .store-button.disabled img {
     height: 35px;
   }
 } 

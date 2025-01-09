@@ -97,11 +97,12 @@ const Hero = () => {
           ))}
         </div>
         <div className="app-store-wrapper">
-          <a href="#" className="store-button">
+          <div className="coming-soon-badge">Coming Soon</div>
+          <a href="#" className="store-button disabled">
             <img src="/img/app-store.png" alt="Download on App Store" />
           </a>
-          <a href="#" className="store-button">
-            <img src="/img/play-store.png" alt="Get it on Google Play" />
+          <a href="#" className="store-button disabled">
+            <img src="/img/google-play.png" alt="Get it on Google Play" />
           </a>
         </div>
       </div>
