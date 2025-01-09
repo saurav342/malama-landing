@@ -1,0 +1,146 @@
+.coming-soon-banner {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Polka dot pattern */
+.coming-soon-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    var(--primary-green) 2px,
+    transparent 2px
+  );
+  background-size: 30px 30px;
+  background-position: 0 0;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;  /* Place content above the pattern */
+}
+
+.thumbs-up {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.coming-soon-banner h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.coming-soon-banner h1 {
+  color: var(--primary-green);
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.coming-soon-banner p {
+  color: #666;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 8px 0;
+}
+
+.coming-soon-banner p:nth-child(2) {
+  color: inherit;
+  font-weight: normal;
+}
+
+.phone-number {
+  position: relative;
+  display: inline-block;
+  margin: 15px 0;
+}
+
+.animated-number {
+  color: var(--primary-green);
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  position: relative;
+  animation: pulseBackground 2s infinite;
+}
+
+@keyframes pulseBackground {
+  0% {
+    background: transparent;
+    transform: scale(1);
+  }
+  50% {
+    background: rgba(44, 90, 46, 0.1);
+    transform: scale(1.05);
+  }
+  100% {
+    background: transparent;
+    transform: scale(1);
+  }
+}
+
+.animated-number:hover {
+  animation: none;
+  background: rgba(44, 90, 46, 0.15);
+  transition: background 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .coming-soon-banner h1 {
+    font-size: 36px;
+  }
+  
+  .coming-soon-banner p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coming-soon-banner h1 {
+    font-size: 28px;
+  }
+  
+  .coming-soon-banner p {
+    font-size: 16px;
+  }
+}
+
+/* Optional: Add a subtle animation to the pattern */
+@keyframes moveDots {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 30px;
+  }
+}
+
+.coming-soon-banner::before {
+  animation: moveDots 20s linear infinite;
+}
+
+/* Adjust pattern size for mobile */
+@media (max-width: 768px) {
+  .coming-soon-banner::before {
+    background-size: 20px 20px;
+  }
+  
+  @keyframes moveDots {
+    100% {
+      background-position: 20px 20px;
+    }
+  }
+} 

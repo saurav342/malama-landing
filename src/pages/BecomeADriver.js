@@ -4,44 +4,58 @@ import '../styles/pages/BecomeADriver.css';
 const BecomeADriver = () => {
   const benefits = [
     {
-      icon: '/img/wallet-icon.svg',
+      icon: '/img/wallet-icon.ico',
       title: 'High Earning Potentials',
       // description: 'Earn competitive rates with bonuses and incentives'
     },
     {
-      icon: '/img/payment-icon.svg',
+      icon: '/img/payment-icon.ico',
       title: 'Weekly Payments',
       // description: 'Get your earnings transferred every week, hassle-free'
     },
     {
-      icon: '/img/manager-icon.svg',
+      icon: '/img/manager-icon.ico',
       title: 'Dedicated Managers',
       // description: '24/7 support from our experienced team'
     },
     {
-      icon: '/img/ev-icon.svg',
+      icon: '/img/ev-icon.ico',
       title: 'EV Cars Available',
       // description: 'Access to our fleet of electric vehicles'
     },
     {
-      icon: '/img/incentive-icon.svg',
+      icon: '/img/incentive-icon.ico',
       title: 'Attractive Incentives',
       // description: 'Regular bonuses and performance rewards'
     },
     {
-      icon: '/img/id-icon.svg',
+      icon: '/img/id-icon.ico',
       title: 'Personal ID',
       // description: 'Professional identity and recognition'
     }
   ];
 
   const requirements = [
-    'Valid Commercial Driving License',
-    'Minimum 2 years of driving experience',
-    'Clean driving record',
-    'Smartphone with internet connection',
-    'Vehicle registration documents (if using own vehicle)',
-    'Background verification clearance'
+    {
+      title: 'Valid License',
+      detail: 'Commercial Driving License with minimum 2 years experience'
+    },
+    {
+      title: 'Clean Record',
+      detail: 'No major traffic violations or accidents in the past 3 years'
+    },
+    {
+      title: 'Smart Device',
+      detail: 'Android/iOS smartphone with active internet connection'
+    },
+    {
+      title: 'Documentation',
+      detail: 'Valid vehicle registration & insurance (if using own vehicle)'
+    },
+    {
+      title: 'Verification',
+      detail: 'Must pass background check and drug screening'
+    }
   ];
 
   return (
@@ -134,13 +148,15 @@ const BecomeADriver = () => {
         <div className="container">
           <div className="requirements-content">
             <div className="requirements-text">
-              <h2>Requirements</h2>
-              <ul className="requirements-list">
+              <h2> Requirements</h2>
+              <div className="requirements-list">
                 {requirements.map((req, index) => (
-                  <li key={index}>{req}</li>
+                  <div key={index} className="requirement-item">
+                    <h3>{req.title}</h3>
+                    <p>{req.detail}</p>
+                  </div>
                 ))}
-              </ul>
-              {/* <button className="apply-btn">Apply Now</button> */}
+              </div>
             </div>
             <div className="requirements-image">
               <img src="/img/requirements.jpg" alt="Driver requirements" />

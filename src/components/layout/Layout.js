@@ -1,6 +1,6 @@
 import Footer from './Footer';
 import Header from './Header';
-
+import WhatsAppFloat from '../common/WhatsAppFloat';
 const Layout = ({ children }) => {
   return (
     <div className="app-container">
@@ -9,6 +9,7 @@ const Layout = ({ children }) => {
       <main className="main-content">
         {children}
       </main>
+      <WhatsAppFloat />
       <Footer />
     </div>
   );
