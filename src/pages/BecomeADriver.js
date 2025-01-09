@@ -194,28 +194,17 @@ const BecomeADriver = () => {
           <div className="requirements-content">
             <div className="requirements-text">
               <h2>Driver Requirements</h2>
-              <div className="requirements-points">
-                <div className="requirement-point">
-                  <h3>Valid License</h3>
-                  <p>Commercial Driving License with minimum 2 years experience</p>
-                </div>
-                <div className="requirement-point">
-                  <h3>Clean Record</h3>
-                  <p>No major traffic violations or accidents in the past 3 years</p>
-                </div>
-                <div className="requirement-point">
-                  <h3>Smart Device</h3>
-                  <p>Android/iOS smartphone with active internet connection</p>
-                </div>
-                <div className="requirement-point">
-                  <h3>Documentation</h3>
-                  <p>Valid vehicle registration & insurance (if using own vehicle)</p>
-                </div>
-                <div className="requirement-point">
-                  <h3>Verification</h3>
-                  <p>Must pass background check and drug screening</p>
-                </div>
-              </div>
+              <ul className="requirements-list">
+                {requirements.map((req, index) => (
+                  <li key={index} className="requirement-item">
+                    <span className="requirement-number">{index + 1}</span>
+                    <div className="requirement-details">
+                      <h3>{req.title}</h3>
+                      <p>{req.detail}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
             <div className="requirements-image">
               <img src="/img/requirements.jpg" alt="Driver requirements" />

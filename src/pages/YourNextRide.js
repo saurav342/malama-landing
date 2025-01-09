@@ -51,17 +51,17 @@ const YourNextRide = () => {
           <div className="hero-text">
             <h1>Your Next Ride,<br />Made Better</h1>
             <p>Experience the future of urban mobility with Malama. Safe, reliable, and comfortable rides at your fingertips.</p>
-            <div className="app-buttons">
+            {/* <div className="app-buttons">
               <a href="#" className="app-button">
                 <img src="/img/app-store.png" alt="Download on App Store" />
               </a>
               <a href="#" className="app-button">
-                <img src="/img/play-store.png" alt="Get it on Google Play" />
+                <img src="/img/google-play.png" alt="Get it on Google Play" />
               </a>
-            </div>
+            </div> */}
           </div>
           <div className="hero-image">
-            <img src="/img/rider-app.png" alt="Malama App" />
+            <img src="/img/x.png" alt="Malama App" />
           </div>
         </div>
       </section>
@@ -119,12 +119,12 @@ const YourNextRide = () => {
                   <img src="/img/app-store.png" alt="Download on App Store" />
                 </a>
                 <a href="#" className="app-button">
-                  <img src="/img/play-store.png" alt="Get it on Google Play" />
+                  <img src="/img/google-play.png" alt="Get it on Google Play" />
                 </a>
               </div>
             </div>
             <div className="app-features-image">
-              <img src="/img/app-features.png" alt="App features" />
+              <img src="/img/appmap.png" alt="App features" />
             </div>
           </div>
         </div>
@@ -154,22 +154,6 @@ const YourNextRide = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="rider-cta">
-        <div className="container">
-          <div className="cta-content">
-            <h2>Ready for Your Next Ride?</h2>
-            <p>Download the app and experience the difference</p>
-            <div className="app-buttons">
-              <a href="#" className="app-button">
-                <img src="/img/app-store.png" alt="Download on App Store" />
-              </a>
-              <a href="#" className="app-button">
-                <img src="/img/play-store.png" alt="Get it on Google Play" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
