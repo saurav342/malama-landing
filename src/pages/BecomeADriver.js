@@ -4,24 +4,34 @@ import '../styles/pages/BecomeADriver.css';
 const BecomeADriver = () => {
   const benefits = [
     {
-      icon: '/img/icon-earnings.svg',
-      title: 'Guaranteed Earnings',
-      description: 'Earn up to ₹45,000 per month with additional incentives and bonuses'
+      icon: '/img/wallet-icon.svg',
+      title: 'High Earning Potentials',
+      // description: 'Earn competitive rates with bonuses and incentives'
     },
     {
-      icon: '/img/icon-flexible.svg',
-      title: 'Flexible Hours',
-      description: 'Choose your own schedule. Work when you want, as much as you want'
+      icon: '/img/payment-icon.svg',
+      title: 'Weekly Payments',
+      // description: 'Get your earnings transferred every week, hassle-free'
     },
     {
-      icon: '/img/icon-support.svg',
-      title: '24/7 Support',
-      description: 'Dedicated support team to help you with any issues or queries'
+      icon: '/img/manager-icon.svg',
+      title: 'Dedicated Managers',
+      // description: '24/7 support from our experienced team'
     },
     {
-      icon: '/img/icon-training.svg',
-      title: 'Professional Training',
-      description: 'Comprehensive training program to help you succeed'
+      icon: '/img/ev-icon.svg',
+      title: 'EV Cars Available',
+      // description: 'Access to our fleet of electric vehicles'
+    },
+    {
+      icon: '/img/incentive-icon.svg',
+      title: 'Attractive Incentives',
+      // description: 'Regular bonuses and performance rewards'
+    },
+    {
+      icon: '/img/id-icon.svg',
+      title: 'Personal ID',
+      // description: 'Professional identity and recognition'
     }
   ];
 
@@ -42,13 +52,13 @@ const BecomeADriver = () => {
           <div className="hero-text">
             <h1>Drive With Malama</h1>
             <p>Join Bangalore's fastest growing taxi service. Earn more, work flexible hours, and be your own boss.</p>
-            <form className="signup-form">
+            {/* <form className="signup-form">
               <input type="tel" placeholder="Enter your mobile number" />
               <button type="submit">Sign Up Now</button>
-            </form>
+            </form> */}
           </div>
           <div className="hero-image">
-            <img src="/img/driver-hero.png" alt="Become a driver" />
+            <img src="/images/expresst.jpeg" alt="Become a driver" />
           </div>
         </div>
       </section>
@@ -56,7 +66,15 @@ const BecomeADriver = () => {
       {/* Benefits Section */}
       <section className="driver-benefits">
         <div className="container">
-          <h2>Why Drive With Us?</h2>
+          <div className="benefits-header">
+            <h1>Benefits of driving with us</h1>
+            <p>
+              As a driver with us, you'll enjoy flexible scheduling, competitive earnings, 
+              and the support of a dedicated team that values your contribution. Whether 
+              you're looking for full-time opportunities or part-time work, we provide 
+              comprehensive training and state-of-the-art technology to help you succeed.
+            </p>
+          </div>
           <div className="benefits-grid">
             {benefits.map((benefit, index) => (
               <div key={index} className="benefit-card">
@@ -121,25 +139,33 @@ const BecomeADriver = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="driver-faq">
+      <section className="faq-section">
         <div className="container">
           <h2>Frequently Asked Questions</h2>
-          <div className="faq-grid">
+          <div className="faq-container">
             <div className="faq-item">
-              <h3>How much can I earn?</h3>
-              <p>Earnings vary based on hours worked and trips completed. On average, our drivers earn ₹35,000 - ₹45,000 per month plus incentives.</p>
+              <details>
+                <summary>How much can I earn?</summary>
+                <p>Earnings vary based on hours worked and trips completed. On average, our drivers earn ₹35,000 - ₹45,000 per month plus incentives.</p>
+              </details>
             </div>
             <div className="faq-item">
-              <h3>Do I need my own car?</h3>
-              <p>You can drive with your own car or use one of our partner vehicles. We have flexible options to suit your needs.</p>
+              <details>
+                <summary>Do I need my own car?</summary>
+                <p>You can drive with your own car or use one of our partner vehicles. We have flexible options to suit your needs.</p>
+              </details>
             </div>
             <div className="faq-item">
-              <h3>How do I get paid?</h3>
-              <p>Payments are made weekly directly to your bank account. You can track your earnings in real-time through our driver app.</p>
+              <details>
+                <summary>How do I get paid?</summary>
+                <p>Payments are made weekly directly to your bank account. You can track your earnings in real-time through our driver app.</p>
+              </details>
             </div>
             <div className="faq-item">
-              <h3>What support do you provide?</h3>
-              <p>We offer 24/7 support, insurance coverage, maintenance assistance, and regular training programs.</p>
+              <details>
+                <summary>What support do you provide?</summary>
+                <p>We offer 24/7 support, insurance coverage, maintenance assistance, and regular training programs.</p>
+              </details>
             </div>
           </div>
         </div>

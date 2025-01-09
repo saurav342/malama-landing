@@ -196,33 +196,66 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
 @media (max-width: 992px) {
-  .story-content,
-  .values-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .about-hero-content,
+  .mission-content,
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+  .about-image {
+    order: -1;
   }
 }
 
 @media (max-width: 768px) {
+  .about-section {
+    padding: 60px 0;
+  }
+
   .about-hero h1 {
     font-size: 36px;
   }
 
-  .story-content {
-    grid-template-columns: 1fr;
+  .section-title {
+    font-size: 28px;
   }
 
-  .values-grid {
-    grid-template-columns: 1fr;
+  .about-text,
+  .mission-text {
+    font-size: 16px;
   }
 
-  .mission-points {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .team-member {
+    padding: 20px;
+  }
+
+  .team-member h3 {
+    font-size: 20px;
+  }
+
+  .team-member p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .team-member h3 {
+    font-size: 18px;
   }
 } 
