@@ -4,17 +4,17 @@ import '../../styles/components/Hero.css';
 const statsData = [
   {
     icon: '/img/icon-vehicle.svg',
-    number: '32002',
-    label: 'SPECIAL VEHICLE'
+    number: '120+',
+    label: 'EV VEHICLES'
   },
   {
     icon: '/img/icon-road.svg',
-    number: '16008',
+    number: '2426+',
     label: 'ROAD TRIPS DONE'
   },
   {
     icon: '/img/icon-location.svg',
-    number: '17068',
+    number: '5250+',
     label: 'PEOPLE DROPPED'
   }
 ];
@@ -75,7 +75,7 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-text">
           <h1>
-            Premium Taxi Service
+            Affordable Taxi Service
             <span>At Your Fingertips</span>
           </h1>
           <p>Experience the perfect blend of comfort, reliability, and professional service. 
