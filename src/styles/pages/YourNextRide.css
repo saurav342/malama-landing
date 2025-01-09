@@ -1,0 +1,272 @@
+@import '../variables.css';
+
+.rider-page {
+  background-color: #fff;
+}
+
+/* Hero Section */
+.rider-hero {
+  background: linear-gradient(135deg, var(--primary-green) 0%, #1a472a 100%);
+  padding: 100px 0;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.app-button img {
+  height: 45px;
+  transition: transform 0.3s ease;
+}
+
+.app-button:hover img {
+  transform: translateY(-3px);
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Features Section */
+.rider-features {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.rider-features h2 {
+  text-align: center;
+  color: var(--primary-green);
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  background: var(--primary-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+.feature-card h3 {
+  color: var(--primary-green);
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* How It Works */
+.how-it-works {
+  padding: 80px 0;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--primary-green);
+  opacity: 0.2;
+  margin-bottom: 20px;
+}
+
+/* App Features */
+.app-features {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.app-features-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.features-list li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.features-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-green);
+  font-weight: bold;
+}
+
+/* Testimonials */
+.rider-testimonials {
+  padding: 80px 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonial-author h4 {
+  color: var(--primary-green);
+  margin-bottom: 5px;
+}
+
+.testimonial-author span {
+  color: #999;
+}
+
+/* CTA Section */
+.rider-cta {
+  background: linear-gradient(135deg, var(--primary-green) 0%, #1a472a 100%);
+  padding: 80px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.cta-content .app-buttons {
+  justify-content: center;
+  margin-top: 30px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-content,
+  .app-features-content {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .features-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+
+  .app-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+} 

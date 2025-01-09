@@ -5,7 +5,8 @@ import About from './pages/About';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
-import DriveWithUs from './pages/DriveWithUs';
+import BecomeADriver from './pages/BecomeADriver';
+import YourNextRide from './pages/YourNextRide';
 import './styles/App.css';
 
 function App() {
@@ -17,8 +18,8 @@ function App() {
           <Route path="/about-us" element={<About />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
-          <Route path="/become-a-driver" element={<DriveWithUs />} />
-          <Route path="/your-next-ride" element={<DriveWithUs />} />
+          <Route path="/become-a-driver" element={<BecomeADriver />} />
+          <Route path="/your-next-ride" element={<YourNextRide />} />
           {/* <Route path="/careers" element={<Careers />} /> */}
 
         </Routes>
