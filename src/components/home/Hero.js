@@ -74,9 +74,12 @@ const Hero = () => {
     <section className="hero">
       <div className="hero-content">
         <div className="hero-text">
-          <h1>Book Your Taxi From<br />Anywhere Today!</h1>
-          <p>We successfully cope with tasks of varying complexity, provide long term guarantees and regularly master</p>
-          {/* <button className="find-taxi-btn">Find A Taxi</button> */}
+          <h1>
+            Premium Taxi Service
+            <span>At Your Fingertips</span>
+          </h1>
+          <p>Experience the perfect blend of comfort, reliability, and professional service. 
+             Our expert drivers ensure your journey is safe and comfortable, every time.</p>
         </div>
       </div>
       
