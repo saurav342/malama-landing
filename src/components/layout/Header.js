@@ -133,8 +133,8 @@ const Header = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 }}
                   >
-                    <Link to="/about" onClick={closeMobileMenu} className={location.pathname === "/about" ? "active" : ""}>
-                      About
+                    <Link to="/your-next-ride" onClick={closeMobileMenu} className={location.pathname === "/your-next-ride" ? "active" : ""}>
+                      Your Next Ride
                     </Link>
                   </motion.li>
                   <motion.li
@@ -142,8 +142,8 @@ const Header = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.3 }}
                   >
-                    <Link to="/privacy" onClick={closeMobileMenu} className={location.pathname === "/privacy" ? "active" : ""}>
-                      Privacy
+                    <Link to="/become-a-driver" onClick={closeMobileMenu} className={location.pathname === "/become-a-driver" ? "active" : ""}>
+                      Drive With Us
                     </Link>
                   </motion.li>
                   <motion.li
@@ -151,8 +151,8 @@ const Header = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.4 }}
                   >
-                    <Link to="/drive-with-us" onClick={closeMobileMenu} className={location.pathname === "/drive-with-us" ? "active" : ""}>
-                      Drive With Us
+                    <Link to="/about-us" onClick={closeMobileMenu} className={location.pathname === "/about-us" ? "active" : ""}>
+                      About
                     </Link>
                   </motion.li>
                   <motion.li
@@ -160,7 +160,7 @@ const Header = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.5 }}
                   >
-                    <Link to="/contact" onClick={closeMobileMenu} className={location.pathname === "/contact" ? "active" : ""}>
+                    <Link to="/contact-us" onClick={closeMobileMenu} className={location.pathname === "/contact-us" ? "active" : ""}>
                       Contact
                     </Link>
                   </motion.li>
