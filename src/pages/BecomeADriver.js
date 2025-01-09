@@ -4,32 +4,32 @@ import '../styles/pages/BecomeADriver.css';
 const BecomeADriver = () => {
   const benefits = [
     {
-      icon: '/img/wallet-icon.ico',
+      icon: '/img/wallet-icon.svg',
       title: 'High Earning Potentials',
       // description: 'Earn competitive rates with bonuses and incentives'
     },
     {
-      icon: '/img/payment-icon.ico',
+      icon: '/img/payment-icon.svg',
       title: 'Weekly Payments',
       // description: 'Get your earnings transferred every week, hassle-free'
     },
     {
-      icon: '/img/manager-icon.ico',
+      icon: '/img/manager-icon.svg',
       title: 'Dedicated Managers',
       // description: '24/7 support from our experienced team'
     },
     {
-      icon: '/img/ev-icon.ico',
+      icon: '/img/ev-icon.svg',
       title: 'EV Cars Available',
       // description: 'Access to our fleet of electric vehicles'
     },
     {
-      icon: '/img/incentive-icon.ico',
+      icon: '/img/incentive-icon.svg',
       title: 'Attractive Incentives',
       // description: 'Regular bonuses and performance rewards'
     },
     {
-      icon: '/img/id-icon.ico',
+      icon: '/img/id-icon.svg',
       title: 'Personal ID',
       // description: 'Professional identity and recognition'
     }
