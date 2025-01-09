@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/pages/YourNextRide.css';
+import HowItWorks from '../components/home/HowItWorks';
 
 const YourNextRide = () => {
   const features = [
@@ -66,39 +67,78 @@ const YourNextRide = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="rider-features">
+      {/* Why choose Malama */}
+      <section className="driver-benefits">
+        <div className="benefits-pattern"></div>
+        <div className="benefits-header">
+          <span className="subtitle">WHY CHOOSE US</span>
+          <h2>Why choose Malama?</h2>
+        </div>
         <div className="container">
-          <h2>Why Choose Malama</h2>
-          <div className="features-grid">
-            {features.map((feature, index) => (
-              <div key={index} className="feature-card">
-                <div className="feature-icon">
-                  <img src={feature.icon} alt={feature.title} />
+          <div className="benefits-layout">
+            {/* Left Benefits */}
+            <div className="benefits-side left-benefits">
+              <div className="benefit-item">
+                <div className="benefit-icon">
+                  <div className="icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2"/>
+                    </svg>
+                  </div>
                 </div>
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
+                <h3>Affordable Rates</h3>
+                <p>Best-in-class pricing with no hidden charges or surge fees</p>
               </div>
-            ))}
+              <div className="benefit-item">
+                <div className="benefit-icon">
+                  <div className="icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" strokeWidth="2"/>
+                    </svg>
+                  </div>
+                </div>
+                <h3>Safety First</h3>
+                <p>Verified drivers, real-time tracking, and 24/7 support</p>
+              </div>
+            </div>
+
+            {/* Center Image */}
+            <div className="benefits-center">
+              <img src="/img/icon-car-2.png" alt="Taxi" className="taxi-icon" />
+            </div>
+
+            {/* Right Benefits */}
+            <div className="benefits-side right-benefits">
+              <div className="benefit-item">
+                <div className="benefit-icon">
+                  <div className="icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M12 2V6M12 18V22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22" stroke="currentColor" strokeWidth="2"/>
+                    </svg>
+                  </div>
+                </div>
+                <h3>Quick Pickups</h3>
+                <p>Large fleet ensures minimal waiting time for your ride</p>
+              </div>
+              <div className="benefit-item">
+                <div className="benefit-icon">
+                  <div className="icon-circle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2"/>
+                    </svg>
+                  </div>
+                </div>
+                <h3>Comfort Assured</h3>
+                <p>Clean, air-conditioned cars with professional drivers</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* How It Works */}
-      <section className="how-it-works">
-        <div className="container">
-          <h2>How It Works</h2>
-          <div className="steps-container">
-            {steps.map((step, index) => (
-              <div key={index} className="step">
-                <div className="step-number">{step.number}</div>
-                <h3>{step.title}</h3>
-                <p>{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HowItWorks />
+
 
       {/* App Features */}
       <section className="app-features">
