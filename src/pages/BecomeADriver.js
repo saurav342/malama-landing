@@ -116,7 +116,7 @@ const BecomeADriver = () => {
 
             {/* Center Image */}
             <div className="benefits-center">
-              <img src="/img/icon-car-2.png" alt="Taxi" className="taxi-icon" />
+              <img src="/img/tata.png" alt="Taxi" className="taxi-icon" />
             </div>
 
             {/* Right Benefits */}
@@ -206,9 +206,9 @@ const BecomeADriver = () => {
                 ))}
               </ul>
             </div>
-            <div className="requirements-image">
+            {/* <div className="requirements-image">
               <img src="/img/requirements.jpg" alt="Driver requirements" />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
