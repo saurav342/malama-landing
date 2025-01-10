@@ -12,6 +12,7 @@ import './styles/App.css';
 
 const TRACKING_ID = "G-93Q8JNK534";
 ReactGA.initialize(TRACKING_ID);
+ReactGA.send({ hitType: "pageview", page: "/", title: "Malama" });
 
 function App() {
   return (
