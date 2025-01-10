@@ -72,7 +72,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Values Section
       <section className="about-values">
         <div className="container">
           <h2>Our Values</h2>
@@ -88,10 +88,10 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Mission Section */}
-      <section className="about-mission">
+      {/* <section className="about-mission">
         <div className="container">
           <div className="mission-content">
             <h2>Our Mission</h2>
@@ -108,7 +108,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
