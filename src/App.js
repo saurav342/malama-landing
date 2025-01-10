@@ -7,7 +7,7 @@ import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import BecomeADriver from './pages/BecomeADriver';
 import YourNextRide from './pages/YourNextRide';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 import './styles/App.css';
 
 const TRACKING_ID = "G-93Q8JNK534";
