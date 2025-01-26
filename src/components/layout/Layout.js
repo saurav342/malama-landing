@@ -1,6 +1,8 @@
+import React from 'react';
 import Footer from './Footer';
 import Header from './Header';
-import WhatsAppFloat from '../common/WhatsAppFloat';
+import FloatingStoreButtons from '../common/FloatingStoreButtons';
+
 const Layout = ({ children }) => {
   return (
     <div className="app-container">
@@ -9,8 +11,8 @@ const Layout = ({ children }) => {
       <main className="main-content">
         {children}
       </main>
-      <WhatsAppFloat />
       <Footer />
+      <FloatingStoreButtons />
     </div>
   );
 };
