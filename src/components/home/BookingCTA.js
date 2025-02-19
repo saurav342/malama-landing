@@ -31,7 +31,7 @@ const BookingCTA = () => {
                 </i>
                 </div>
                 <div className="card-text">
-                  <h3>WhatsApp Booking</h3>
+                  <h3>Ping us on WhatsApp</h3>
                   <p>+91 7975612340</p>
                   <span className="support-text">Quick response • 24/7 Support</span>
                 </div>
@@ -48,7 +48,7 @@ const BookingCTA = () => {
                   </svg>
                 </div>
                 <div className="card-text">
-                  <h3>Call Us</h3>
+                  <h3>Call us at</h3>
                   <p>+91 7975612340</p>
                 </div>
               </div>
@@ -61,7 +61,7 @@ const BookingCTA = () => {
             <div className="app-content">
               <div className="app-header">
                 <h3>Get the Malama App</h3>
-                <p>Book your rides instantly</p>
+                <p>Scan the QR code to download the app</p>
               </div>
               <div className="qr-container">
                 <img src="/images/qr.png" alt="Get it on Google Play" width={200}/>

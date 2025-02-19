@@ -1,41 +1,68 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import '../../styles/components/Hero.css';
 
 const Hero = () => {
+  const benefits = [
+    {
+      icon: '🚗',
+      title: 'Sedan with Boot Space',
+      description: 'Comfortable ride with luggage space'
+    },
+    {
+      icon: '⚡',
+      title: 'EV - Eco-friendly Ride',
+      description: 'Zero emissions, clean energy'
+    },
+    {
+      icon: '🛡️',
+      title: 'Clean & Hygienic Car',
+      description: 'Sanitized after every ride'
+    }
+  ];
+
   return (
     <section className="hero">
       <div className="hero-gradient-overlay"></div>
       <div className="hero-content container">
         <div className="hero-text">
-          <div className="hero-badge">
+          <motion.div 
+            className="hero-badge"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <span className="pulse"></span>
             Now in Bangalore
-          </div>
-          <h1>
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             Economical & Green
             <span>Airport Rides</span>
-          </h1>
+          </motion.h1>
           
-          <div className="hero-features">
-            <div className="feature">
-              <div className="feature-content">
-                <h3>Sedan with Boot Space</h3>
-                <p>Comfortable ride with luggage space</p>
-              </div>
+          <motion.div 
+            className="benefits-container"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <div className="benefits-row">
+              {benefits.map((benefit, index) => (
+                <div 
+                  key={index} 
+                  className="benefit-item"
+                >
+                  <div className="benefit-icon">{benefit.icon}</div>
+                  <div className="benefit-title">{benefit.title}</div>
+                  <div className="benefit-description">{benefit.description}</div>
+                </div>
+              ))}
             </div>
-            <div className="feature">
-              <div className="feature-content">
-                <h3>EV - Eco-friendly Ride</h3>
-                <p>Zero emissions, clean energy</p>
-              </div>
-            </div>
-            <div className="feature">
-              <div className="feature-content">
-                <h3>Clean & Hygienic Car</h3>
-                <p>Sanitized after every ride</p>
-              </div>
-            </div>
-          </div>
+          </motion.div>
 
           <div className="pricing-cards">
             <div className="pricing-card">
