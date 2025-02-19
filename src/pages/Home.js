@@ -1,5 +1,7 @@
 import React from 'react';
 import Hero from '../components/home/Hero';
+import BookingCTA from '../components/home/BookingCTA';
+import Footer from '../components/home/Footer';
 import Features from '../components/home/Features';
 import AppDownload from '../components/home/AppDownload';
 import HowItWorks from '../components/home/HowItWorks';
@@ -13,6 +15,7 @@ const Home = () => {
     <div className="home">
       {/* <ComingSoonBanner /> */}
       <Hero />
+      <BookingCTA />
       <HowItWorks />
       {/* <Features /> */}
       <section className="rider-testimonials">
@@ -38,6 +41,7 @@ const Home = () => {
       </section>
       <FAQ />
       {/* <AppDownload /> */}
+      {/* <Footer /> */}
     </div>
   );
 };

@@ -1,9 +1,9 @@
 @import '../variables.css';
 
 .footer {
-  background-color: var(--primary-green);
-  color: #fff;
-  padding-top: 60px;
+  background: #1a1a1a;
+  color: white;
+  padding: 60px 0 20px;
 }
 
 .footer-content {
@@ -11,20 +11,20 @@
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: 2fr 1.5fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .footer-brand {
-  max-width: 400px;
+  max-width: 300px;
 }
 
 .footer-logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   text-decoration: none;
 }
 
@@ -39,16 +39,22 @@
   font-weight: 700;
 }
 
-.footer-description {
-  color: rgba(255, 255, 255, 0.9);
+.footer-brand p {
+  color: #d9f2d9;
   line-height: 1.6;
-  margin: 0;
 }
 
 .footer-section h3 {
   color: #fff;
   font-size: 20px;
   margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.footer-section h4 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
   font-weight: 600;
 }
 
@@ -74,6 +80,47 @@
 .service-item p {
   color: rgba(255, 255, 255, 0.9);
   margin: 0;
+}
+
+.footer-contact p {
+  margin-bottom: 12px;
+}
+
+.footer-contact a {
+  color: #d9f2d9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #38761d;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-link {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: #38761d;
+  transform: translateY(-3px);
+}
+
+.social-link img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
 }
 
 .newsletter-form {
@@ -114,8 +161,9 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 20px 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
 }
 
 .footer-bottom-content {
@@ -128,8 +176,8 @@
 }
 
 .footer-bottom p {
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
 }
 
 .footer-links {
@@ -166,10 +214,16 @@
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;
+    text-align: center;
+    gap: 32px;
   }
 
   .footer-brand {
-    grid-column: 1;
+    max-width: none;
+  }
+
+  .social-links {
+    justify-content: center;
   }
 
   .footer-bottom-content {
@@ -177,4 +231,4 @@
     gap: 15px;
     text-align: center;
   }
-} 
+}

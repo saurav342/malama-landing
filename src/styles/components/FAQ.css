@@ -1,6 +1,6 @@
 /* FAQ Section */
 .malama-faq {
-  padding: 100px 0;
+  padding: 60px 0;
   background: #fff;
   position: relative;
   overflow: hidden;
@@ -16,7 +16,7 @@
 
 .malama-faq__header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -31,230 +31,115 @@
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  position: relative;
-}
-
-.malama-faq__subtitle::before {
-  content: '';
-  position: absolute;
-  left: -15px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 16px;
-  background: #FFE600;
 }
 
 .malama-faq__title {
-  font-size: 56px;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--primary-green) 0%, #1a472a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
-  line-height: 1.1;
-}
-
-.malama-faq__description {
-  color: #666;
-  font-size: 18px;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
+  font-size: 32px;
+  font-weight: 700;
+  color: #38761d;
+  margin-bottom: 0;
+  line-height: 1.2;
 }
 
 .malama-faq__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 24px;
+  margin-top: 40px;
 }
 
-.malama-faq__item {
-  background: #fff;
-  border-radius: 16px;
-  padding: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: visible;
-}
-
-.malama-faq__item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.malama-faq__item:hover::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--hover-color);
-  opacity: 0.1;
-  border-radius: 16px;
-}
-
-.malama-faq__icon {
-  width: 48px;
-  height: 48px;
-  background: var(--hover-color);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 2;
-}
-
-.malama-faq__content {
-  position: relative;
-  z-index: 1;
-}
-
-.malama-faq__question {
-  font-size: 20px;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.malama-faq__answer {
-  max-height: 0;
-  opacity: 0;
-  transition: all 0.3s ease;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.malama-faq__item.active .malama-faq__answer {
-  max-height: 1000px;
-  opacity: 1;
-  margin-top: 15px;
-  visibility: visible;
-}
-
-.malama-faq__answer-text {
-  color: #666;
-  line-height: 1.6;
-  margin: 0;
-  font-size: 15px;
-}
-
-.malama-faq__toggle {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  z-index: 2;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.malama-faq__toggle-icon {
-  transition: all 0.3s ease;
-}
-
-.malama-faq__item.active .malama-faq__toggle-icon {
-  transform: rotate(45deg);
-}
-
-/* Pattern Decoration */
-.malama-faq__pattern {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  opacity: 0.1;
-}
-
-.malama-faq__pattern-circle {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border: 2px dashed var(--primary-green);
-  border-radius: 50%;
-  top: -200px;
-  left: -200px;
-}
-
-.malama-faq__pattern-line {
-  position: absolute;
-  width: 2px;
+.faq-card {
+  padding: 20px;
+  border-radius: 8px;
+  background: #d9f2d9;
+  transition: transform 0.2s ease;
   height: 100%;
-  background: linear-gradient(to bottom, transparent, var(--primary-green), transparent);
-  right: 100px;
-  transform: rotate(45deg);
 }
 
-.malama-faq__pattern-dots {
-  position: absolute;
-  bottom: -50px;
-  right: -50px;
-  width: 200px;
-  height: 200px;
-  background-image: radial-gradient(var(--primary-green) 2px, transparent 2px);
-  background-size: 20px 20px;
+.faq-card:hover {
+  transform: translateY(-2px);
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-  .malama-faq__grid {
-    grid-template-columns: 1fr;
-    max-width: 600px;
-    margin: 0 auto;
-  }
+.faq-card__icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-bottom: 20px;
+}
 
-  .malama-faq__title {
-    font-size: 48px;
-  }
+.faq-card__question {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #38761d;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.faq-card__answer {
+  color: #333;
+  line-height: 1.5;
+  font-size: 15px;
+  padding-left: 32px;
+}
+
+.faq-note {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #555;
+  font-style: italic;
 }
 
 @media (max-width: 768px) {
   .malama-faq {
-    padding: 60px 0;
+    padding: 40px 0;
+  }
+
+  .malama-faq__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 600px;
+    margin: 40px auto 0;
   }
 
   .malama-faq__title {
-    font-size: 42px;
+    font-size: 28px;
   }
 
-  .malama-faq__description {
+  .faq-card {
+    padding: 16px;
+  }
+
+  .faq-card__question {
     font-size: 16px;
   }
 
-  .malama-faq__item {
-    padding: 20px;
-  }
-
-  .malama-faq__icon {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-  }
-
-  .malama-faq__question {
-    font-size: 18px;
-    padding-right: 30px;
-  }
-
-  .malama-faq__toggle {
-    top: 20px;
-    right: 20px;
+  .faq-card__answer {
+    font-size: 14px;
+    padding-left: 28px;
   }
 }
 
-@media (max-width: 480px) {
-  .malama-faq__title {
-    font-size: 36px;
+@media (max-width: 576px) {
+  .malama-faq {
+    padding: 40px 0;
   }
 
-  .malama-faq__item {
-    padding: 15px;
+  .malama-faq__title {
+    font-size: 24px;
+  }
+
+  .faq-card__question {
+    font-size: 14px;
+  }
+
+  .faq-card__answer {
+    font-size: 13px;
+  }
+
+  .faq-note {
+    font-size: 12px;
   }
 }

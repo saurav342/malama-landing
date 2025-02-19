@@ -1,0 +1,6 @@
+<!-- facebook.svg -->
+<svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="12" cy="12" r="10" fill="#3b5998"/>
+  <path d="M14 8H12C10.895 8 10 8.895 10 10V12H8V14H10V20H12V14H14V12H12V10H14V8Z" fill="#fff"/>
+</svg>
+
